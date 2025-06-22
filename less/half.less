@@ -1,0 +1,50 @@
+.half-inverted {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: @unit5;
+  .p-5();
+  background-color: @secondary-background-color;
+
+  .half-texto,
+  .half-img {
+    flex: 1 1 300px;
+  }
+
+  .half-texto {
+    h2 {
+      .text-extra-large();
+      color: @primary-text-color;
+      margin-bottom: @unit4;
+    }
+
+    p {
+      .text-normal();
+      color: @secondary-text-color;
+      margin-bottom: @unit5;
+    }
+
+    button {
+      padding: @unit3 @unit5;
+      background-color: @primary-background-color;
+      color: white;
+      border: none;
+      .roundSmall();
+      cursor: pointer;
+      .shadow();
+
+      &:hover {
+        background-color: darken(@primary-background-color, 10%);
+      }
+    }
+  }
+
+  .half-img img {
+    width: 100%;
+    height: auto;
+    .round();
+    .shadow();
+    object-fit: cover;
+  }
+}
